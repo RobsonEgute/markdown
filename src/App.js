@@ -1,14 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import Marked from "marked";
+import {marked} from "marked";
 
-class Markdown extends React.Component {
+//a header (H1 size), a sub header (H2 size), a link, inline code, 
+//a code block, a list item, a blockquote, an image, and bolded text
+class MarkdownComponent extends React.Component {
 constructor(props) {
   super(props);
   this.state = {
-    input: ""
-  }
+    input: `
+# H1  
+
+## H2  
+
+### H3  
+
+*italicized text*  
+
+> blockquote  
+
+- First item  
+- Second item  
+- Third item  
+
+\`code\`   
+ 
+\`\`\` 
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}  
+\`\`\`  
+
+![alt text](image.jpg)  
+
+**bold text**  
+
+[title](https://www.example.com)
+    `
+  };
   this.handleChange = this.handleChange.bind(this);
 }
 
@@ -19,11 +50,12 @@ handleChange(event) {
 }
 
 render() {
+  
   return (
     <div>
       <h1>Markdown Previewer</h1>
-      <textarea id="editor" onChange={this.handleChange}> </textarea>
-      <div id="preview">{this.state.input}</div>
+      <textarea id="editor" onChange={this.handleChange} value={this.state.input}> </textarea>
+      <div id="preview" inputText={this.state.input} dangerouslySetInnerHTML={{ __html: marked(this.state.input)}} />
     </div>
   )
 }
@@ -32,7 +64,7 @@ render() {
 function App() {
   return (
     <div className="App">
-      <Markdown />
+      <MarkdownComponent />
     </div>
   );
 }
