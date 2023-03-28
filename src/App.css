@@ -6,38 +6,169 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#preview {
+  width: 50%;
+  height: 522px;
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  top: 18px;
+  border-left: 3px solid green;
+  border-right: 3px solid green;
+  border-bottom: 3px solid green;
+  border-top: 3px solid green;
+  overflow: auto;
+  
 }
 #editor {
-  width: 500px;
-  height: 600px;
-  border-radius: 3px solid blue;
+  width: 100%;
+  height: 515px;;
+  border-left: "3px solid blue";
+  border-right: "3px solid blue";
+  border-bottom: "3px solid blue";
+}
+.header1 {
+  width: 100%;
+  height: 20px;
+  background-color: black;
+  
+}
+.toggle1{
+  color: white;
+  position: absolute;
+  right: 10px;
+  margin-top: 7px;
+}
+.toggle1:hover {
+  background-color: red;
+}
+.headerContainer1 {
+  position: absolute;
+  top: 48px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+}
+.previewContainer1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  
+}
+.container1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.container2 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+}
+/*.headerContainer2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+}*/
+.header2 {
+  width: 100%;
+  height: 20px;
+  background-color: black;
+  margin: auto;
+  position: relative;
+}
+.pheader {
+  width: 50%;
+  height: 20px;
+  background-color: green;
+  margin: auto;
+  position: absolute;
+  right: 0px;
+  
+}
+.toggle2{
+  color: white;
+  position: absolute;
+  right: 10px;
+  margin-top: 7px;
+}
+.toggle2:hover {
+  background-color: red;
+}
+.previewBlock2 {
+    width: 100%;
+    height: 522px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    top: 18px;
+    border-left: 3px solid green;
+    border-right: 3px solid green;
+    border-bottom: 3px solid green;
+    border-top: 3px solid green;
+    overflow: auto;
+    transition: 2000ms
+}
+@media (orientation: portrait) {
+  .headerContainer1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .previewContainer1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0px;
+    top: 533px;
+    
+  }
+  #editor {
+    display: block;
+    width: 100%;
+    height: 515px;;
+    border-left: "3px solid blue";
+    border-right: "3px solid blue";
+    border-bottom: "3px solid blue";
+  }
+  #preview {
+    display: block;
+    width: 100%;
+    height: 522px;
+    border-left: 3px solid green;
+    border-right: 3px solid green;
+    border-bottom: 3px solid green;
+    border-top: 3px solid green;
+    overflow: auto;
+  }
+  .container1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .pheader {
+    width: 100%;
+    height: 20px;
+    background-color: green;
+    margin: auto;
+    position: absolute;
+    right: 0px;
+    
+  }
 }
